@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= pageTitle
+  body
+    h1= pageTitle
+    p
+      a(href="/update-cobj") Add/Update this table
+    
+    table(style='width:auto', border='1')
+      thead
+        tr
+          th Name
+          th Father's Name
+          th Address
+      tbody
+        each obj in customObjects
+          tr
+            td= obj.name
+            td= obj.father_name
+            td= obj.address
